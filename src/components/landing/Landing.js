@@ -41,7 +41,7 @@ const Landing = () => {
               The architecture is the art.
             </span>
             <a
-              href="https://medium.com/@devi-r"
+              href="https://medium.com/@devi-r/ea315b887911"
               target="_blank"
               rel="noopener noreferrer"
               className="ml-3 inline-block text-white hover:text-[#00f2ea] transition-colors duration-200"
@@ -51,7 +51,7 @@ const Landing = () => {
               <FaMedium className="text-2xl lg:text-3xl" />
             </a>
             <a
-              href="https://github.com/devi-r/"
+              href="https://github.com/devi-r/React-Shell-Microfrontends-Portfolio"
               target="_blank"
               rel="noopener noreferrer"
               className="ml-3 inline-block text-white hover:text-[#00f2ea] transition-colors duration-200"
