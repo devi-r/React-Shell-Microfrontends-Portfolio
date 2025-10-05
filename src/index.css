@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+:root {
+  /* --- Fancy Border Variables --- */
+  --fancy-border-corner-size: 30px;
+  --fancy-border-width: 2px;
+  --fancy-border-gap: 20px; /* Gap between border and content */
+
+  /* --- Fancy Border Colors --- */
+  --fancy-border-bg-content: #0f2938;
+  --fancy-border-color: #3b4c7c;
+  --fancy-border-corner-color: #2aacab;
+  --fancy-border-text-color: #e0e5f5;
+
+  --fancy-border-hover-corner-color: #00f2ea;
+}
+
+.layout-root {
+  container-type: inline-size;
+  container-name: layout-root;
+  position: relative;
+}
+
+/* Hide scrollbar for navigation items */
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* WebKit */
+}
+
+.fancy-border-box {
+  color: var(--fancy-border-text-color);
+  transition: --fancy-border-hover-corner-color 0.3s ease; /* Transition the custom property directly */
+
+  /* Set padding to create space for the border + gap */
+  padding: calc(var(--fancy-border-width) + var(--fancy-border-gap));
+
+  /* The magic happens here! We layer 13 gradients. */
+  background:
+      /* 8 Gradients for the 4 corners (2 per corner) */ linear-gradient(
+        var(--fancy-border-corner-color),
+        var(--fancy-border-corner-color)
+      )
+      left top,
+    linear-gradient(
+        var(--fancy-border-corner-color),
+        var(--fancy-border-corner-color)
+      )
+      left top,
+    linear-gradient(
+        var(--fancy-border-corner-color),
+        var(--fancy-border-corner-color)
+      )
+      right top,
+    linear-gradient(
+        var(--fancy-border-corner-color),
+        var(--fancy-border-corner-color)
+      )
+      right top,
+    linear-gradient(
+        var(--fancy-border-corner-color),
+        var(--fancy-border-corner-color)
+      )
+      left bottom,
+    linear-gradient(
+        var(--fancy-border-corner-color),
+        var(--fancy-border-corner-color)
+      )
+      left bottom,
+    linear-gradient(
+        var(--fancy-border-corner-color),
+        var(--fancy-border-corner-color)
+      )
+      right bottom,
+    linear-gradient(
+        var(--fancy-border-corner-color),
+        var(--fancy-border-corner-color)
+      )
+      right bottom,
+    /* 4 Gradients for the 4 border lines */
+      linear-gradient(var(--fancy-border-color), var(--fancy-border-color)) left
+      center,
+    linear-gradient(var(--fancy-border-color), var(--fancy-border-color)) right
+      center,
+    linear-gradient(var(--fancy-border-color), var(--fancy-border-color)) center
+      top,
+    linear-gradient(var(--fancy-border-color), var(--fancy-border-color)) center
+      bottom,
+    /* 1 Final gradient for the content background */
+      linear-gradient(
+        var(--fancy-border-bg-content),
+        var(--fancy-border-bg-content)
+      )
+      center center;
+
+  background-size:
+      /* Corners sizes (horizontal, vertical) */ var(
+        --fancy-border-corner-size
+      )
+      var(--fancy-border-width),
+    var(--fancy-border-width) var(--fancy-border-corner-size),
+    var(--fancy-border-corner-size) var(--fancy-border-width),
+    var(--fancy-border-width) var(--fancy-border-corner-size),
+    var(--fancy-border-corner-size) var(--fancy-border-width),
+    var(--fancy-border-width) var(--fancy-border-corner-size),
+    var(--fancy-border-corner-size) var(--fancy-border-width),
+    var(--fancy-border-width) var(--fancy-border-corner-size),
+    /* Border line sizes (horizontal, vertical) */ var(--fancy-border-width)
+      calc(100% - 2 * var(--fancy-border-corner-size)),
+    var(--fancy-border-width) calc(100% - 2 * var(--fancy-border-corner-size)),
+    calc(100% - 2 * var(--fancy-border-corner-size)) var(--fancy-border-width),
+    calc(100% - 2 * var(--fancy-border-corner-size)) var(--fancy-border-width),
+    /* Content background size */ calc(100% - 2 * var(--fancy-border-width))
+      calc(100% - 2 * var(--fancy-border-width));
+
+  background-repeat: no-repeat;
+}
+
+.fancy-border-box:hover {
+  /* On hover, we just update the CSS variable */
+  --fancy-border-corner-color: var(--fancy-border-hover-corner-color);
+}

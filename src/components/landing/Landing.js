@@ -1,0 +1,48 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import { sidebarProjectItems } from "../../constants/main";
+
+const Landing = () => {
+  const firstProject = sidebarProjectItems[0];
+
+  return (
+    <div
+      className="w-full h-full bg-[#0F2430] bg-cover bg-center bg-no-repeat m-0 p-0"
+      style={{ backgroundImage: "url(/landing.svg)" }}
+    >
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="text-[#A1F6FF] text-left max-w-4xl px-8 backdrop-blur-sm">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8">
+            Beyond the 'what', <br />
+            this is the 'how'.
+          </h1>
+          <p className="text-[#A7D1D7] text-sm md:text-base lg:text-xl mb-6 leading-relaxed">
+            This application serves as a client-side shell{" "}
+            <br className="max-sm:hidden" />
+            for a microfrontend architecture. Each project{" "}
+            <br className="max-sm:hidden" />
+            is an independently deployed application,{" "}
+            <br className="max-sm:hidden" />
+            composed dynamically at runtime.
+            <br />
+          </p>
+          <p className="text-[#A1F6FF] text-sm md:text-base lg:text-xl">
+            <span className="pb-0.5 border-b border-b-[#A1F6FF]">
+              The architecture is the art.
+            </span>
+          </p>
+
+          {/* Explore Button */}
+          <Link
+            to={firstProject.viewUrl}
+            className="mt-6 md:mt-16 inline-block bg-[#193C50] text-[#0F2430] border border-[#193C50] px-8 py-3 rounded-[1000px] font-semibold text-[#CDEBEE] text-sm md:text-base lg:text-lg hover:bg-[#0D212E] hover:border-[#153243] transition-colors duration-200"
+          >
+            Explore the architecture
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Landing;
