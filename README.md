@@ -18,7 +18,7 @@ As the central **React Shell**, this application is responsible for the main lay
 
 Each remote application is developed and deployed independently.
 
-| Remote Project Name   | Repo                                                                             | Preview                                                 |
+| Remote Projects       | Repo                                                                             | Preview                                                 |
 | --------------------- | -------------------------------------------------------------------------------- | ------------------------------------------------------- |
 | Post Login Dashboard  | https://github.com/devi-r/React-Post-Login-Dashboard                             | https://react-post-login-dashboard.onrender.com/        |
 | Ecommerce Catalogue   | https://github.com/devi-r/React-Ecommerce-Catalogue-Page                         | https://react-ecommerce-catalogue-page.onrender.com     |
