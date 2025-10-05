@@ -18,7 +18,7 @@ As the central **React Shell**, this application is responsible for the main lay
 
 Each remote application is developed and deployed independently.
 
-| Remote Project Name   | Repo                                                                             | Preview                                                 |
+| Remote Projects       | Repo                                                                             | Preview                                                 |
 | --------------------- | -------------------------------------------------------------------------------- | ------------------------------------------------------- |
 | Post Login Dashboard  | https://github.com/devi-r/React-Post-Login-Dashboard                             | https://react-post-login-dashboard.onrender.com/        |
 | Ecommerce Catalogue   | https://github.com/devi-r/React-Ecommerce-Catalogue-Page                         | https://react-ecommerce-catalogue-page.onrender.com     |
@@ -28,7 +28,7 @@ Each remote application is developed and deployed independently.
 
 ## Mock Backend Server
 
-Several remotes rely on dynamic data to function. To simulate a real-world environment without the overhead of a full backend, this project includes an `express-mock-server`[https://express-mock-server-rose.vercel.app]. This server provides a simple, hardcoded API that the remotes can fetch data from, allowing them to be developed and demonstrated as if they were connected to live services.
+Several remotes rely on dynamic data to function. To simulate a real-world environment without the overhead of a full backend, this project includes an [express-mock-server](https://express-mock-server-rose.vercel.app) [Repo](https://github.com/devi-r/Express-Mock-Server). This server provides a simple, hardcoded API that the remotes can fetch data from, allowing them to be developed and demonstrated as if they were connected to live services.
 
 ## Getting Started: Local Development
 
@@ -56,10 +56,6 @@ To run the entire ecosystem on your local machine, follow these steps.
 
 3.  **Run the applications:**
     It's important to start the remote applications **first**, as the shell will fetch their `remoteEntry.js` files on startup. Open a new terminal for each application.
-
-    ```
-
-    ```
 
 4.  **Open the application:**
     Navigate to `http://localhost:3000` in your browser to see the shell application with the remotes integrated.
