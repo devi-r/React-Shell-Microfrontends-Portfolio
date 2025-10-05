@@ -62,7 +62,7 @@ const Sidebar = ({ isMenuOpen }) => {
         isCollapsed ? "md:w-[68px]" : "md:w-72"
       }
       
-      md:transition-all md:duration-300 md:ease-in-out
+      md:transition-all md:duration-200 md:ease-in-out
       `}
     >
       <SidebarHeader

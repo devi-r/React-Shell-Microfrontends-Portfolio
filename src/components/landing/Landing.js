@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { sidebarProjectItems } from "../../constants/main";
+import { ROUTES } from "../../constants/routes";
 
 const Landing = () => {
   const firstProject = sidebarProjectItems[0];
@@ -10,6 +11,14 @@ const Landing = () => {
       className="w-full h-full bg-[#0F2430] bg-cover bg-center bg-no-repeat m-0 p-0"
       style={{ backgroundImage: "url(/landing.svg)" }}
     >
+      <Link
+        to={ROUTES.LANDING}
+        className="flex items-center absolute top-6 left-8 md:right-6 md:left-auto"
+      >
+        <h1 className="text-white text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight truncate">
+          Devi R
+        </h1>
+      </Link>
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="text-[#A1F6FF] text-left max-w-4xl px-8 backdrop-blur-sm">
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8">

@@ -1,5 +1,7 @@
 import React from "react";
 import { HiMenu } from "react-icons/hi";
+import { Link } from "react-router-dom";
+import { ROUTES } from "../../../constants/routes";
 
 const SidebarHeader = ({
   isCollapsed,
@@ -22,11 +24,11 @@ const SidebarHeader = ({
         <HiMenu className="w-5 h-5 group-hover:scale-110 transition-transform text-[#A1F6FF]" />
       </button>
       {!isCollapsed && (
-        <div className="flex items-center ml-3">
-          <h2 className="text-white text-sm md:text-base lg:text-xl font-semibold tracking-tight truncate">
+        <Link to={ROUTES.LANDING} className="flex items-center">
+          <h2 className="text-white text-base lg:text-xl font-semibold tracking-tight truncate">
             Devi R
           </h2>
-        </div>
+        </Link>
       )}
     </div>
   );

@@ -35,7 +35,7 @@ const Projects = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 p-4 max-w-[500px] lg:max-w-[700px]">
+        <div className="w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 p-4 max-w-[600px] lg:max-w-[700px]">
           {projectItems.map((project) => (
             <Project key={project.id} project={project} />
           ))}

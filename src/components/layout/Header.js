@@ -1,8 +1,10 @@
 import { HiMenu } from "react-icons/hi";
+import { Link } from "react-router-dom";
+import { ROUTES } from "../../constants/routes";
 
 const Header = ({ onMenuClick }) => {
   return (
-    <div className="bg-[#0F2430] flex items-center justify-between p-4 md:hidden">
+    <div className="bg-[#0F2430] flex items-center justify-between py-4 pl-4 pr-8 md:hidden">
       <button
         onClick={onMenuClick}
         className="text-slate-300 hover:text-white p-2 rounded-lg hover:bg-slate-800/50 transition-all duration-300 group relative"
@@ -10,11 +12,11 @@ const Header = ({ onMenuClick }) => {
         <HiMenu className="w-5 h-5 group-hover:scale-110 transition-transform text-[#A1F6FF]" />
       </button>
 
-      <div className="flex items-center ml-3">
-        <h2 className="text-white text-sm md:text-base lg:text-xl font-semibold tracking-tight truncate">
+      <Link to={ROUTES.LANDING} className="flex items-center">
+        <h2 className="text-white text-xl lg:text-2xl font-semibold tracking-tight truncate">
           Devi R
         </h2>
-      </div>
+      </Link>
     </div>
   );
 };
