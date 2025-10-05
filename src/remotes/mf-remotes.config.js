@@ -31,7 +31,7 @@ export const remotes = [
     name: "AboutMe",
     path: ROUTES.ABOUT_ME,
     devUrl: "http://localhost:3005/remoteEntry.js",
-    prodUrl: "https://react-webgl-color-splatter.onrender.com/remoteEntry.js",
+    prodUrl: "https://react-webgl-paint-splatter.onrender.com/remoteEntry.js",
   },
 ];
 
