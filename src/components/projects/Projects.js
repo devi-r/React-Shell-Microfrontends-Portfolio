@@ -8,11 +8,11 @@ const Projects = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#A1F6FF] mb-4">
+          <h1 className="text-3xl md:text-3xl lg:text-4xl font-bold text-[#A1F6FF] mb-4">
             My Projects
           </h1>
           <div className="flex justify-center px-4">
-            <p className="max-w-3xl text-left text-xs md:text-sm lg:text-base leading-relaxed">
+            <p className="max-w-3xl text-left text-sm md:text-sm lg:text-base leading-relaxed">
               <span className="font-bold text-[#A1F6FF]">Disclaimer: </span>
               <span className="text-[#A7D1D7]">
                 The projects featured within this portfolio are personal pet
@@ -43,7 +43,7 @@ const Projects = () => {
 
         {/* Footer Note */}
         <div className="text-center mt-16">
-          <p className="text-gray-500 text-xs md:text-sm">
+          <p className="text-gray-500 text-sm md:text-sm">
             More projects available on{" "}
             <a
               href="https://github.com/devi-r"

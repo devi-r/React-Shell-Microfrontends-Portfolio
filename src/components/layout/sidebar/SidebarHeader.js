@@ -25,7 +25,7 @@ const SidebarHeader = ({
       </button>
       {!isCollapsed && (
         <Link to={ROUTES.LANDING} className="flex items-center">
-          <h2 className="text-white text-base lg:text-xl font-semibold tracking-tight truncate">
+          <h2 className="text-white text-lg lg:text-xl font-semibold tracking-tight truncate">
             Devi R
           </h2>
         </Link>

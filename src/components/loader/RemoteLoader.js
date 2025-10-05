@@ -68,7 +68,7 @@ export default function RemoteLoader() {
           />
         </svg>
 
-        <div className="text-base font-medium tracking-wider animate-pulse">
+        <div className="text-lg font-medium tracking-wider animate-pulse">
           Bootstrapping Module...
         </div>
       </div>

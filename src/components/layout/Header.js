@@ -13,7 +13,7 @@ const Header = ({ onMenuClick }) => {
       </button>
 
       <Link to={ROUTES.LANDING} className="flex items-center">
-        <h2 className="text-white text-xl lg:text-2xl font-semibold tracking-tight truncate">
+        <h2 className="text-white text-2xl lg:text-2xl font-semibold tracking-tight truncate">
           Devi R
         </h2>
       </Link>

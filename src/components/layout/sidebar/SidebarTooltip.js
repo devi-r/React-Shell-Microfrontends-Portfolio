@@ -6,7 +6,7 @@ const SidebarTooltip = ({ isVisible, position, text }) => {
 
   return createPortal(
     <div
-      className="fixed px-2 py-1 bg-slate-800 text-white text-xs md:text-sm rounded shadow-lg whitespace-nowrap z-[9999] pointer-events-none"
+      className="fixed px-2 py-1 bg-slate-800 text-white text-sm md:text-sm rounded shadow-lg whitespace-nowrap z-[9999] pointer-events-none"
       style={{
         top: position.top,
         left: position.left,
