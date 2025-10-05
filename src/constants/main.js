@@ -10,32 +10,32 @@ import { AiFillCode } from "react-icons/ai";
 export const projectItems = [
   {
     id: 1,
-    title: "Post Login Dashboard",
-    viewUrl: ROUTES.POST_LOGIN_DASHBOARD,
-    githubUrl: "https://github.com/devi-r/React-Post-Login-Dashboard",
-    icon: <MdDashboard />,
-  },
-  {
-    id: 2,
-    title: "Ecommerce Catalogue",
-    viewUrl: ROUTES.ECOMMERCE_CATALOGUE,
-    githubUrl: "https://github.com/devi-r/React-Ecommerce-Catalogue-Page",
-    icon: <MdFolder />,
-  },
-  {
-    id: 3,
     title: "Syntax Highlighter",
     viewUrl: ROUTES.SYNTAX_HIGHLIGHTER,
     githubUrl: "https://github.com/devi-r/React-Syntax-Highlighter",
     icon: <MdCode />,
   },
   {
-    id: 4,
+    id: 2,
     title: "AI FE System Designer",
     viewUrl: ROUTES.AI_FE_SYSTEM_DESIGNER,
     githubUrl:
       "https://github.com/devi-r/Nextjs-Fullstack-AI-FE-System-Design-Article-Generator",
     icon: <AiFillCode />,
+  },
+  {
+    id: 3,
+    title: "Ecommerce Catalogue",
+    viewUrl: ROUTES.ECOMMERCE_CATALOGUE,
+    githubUrl: "https://github.com/devi-r/React-Ecommerce-Catalogue-Page",
+    icon: <MdFolder />,
+  },
+  {
+    id: 4,
+    title: "Post Login Dashboard",
+    viewUrl: ROUTES.POST_LOGIN_DASHBOARD,
+    githubUrl: "https://github.com/devi-r/React-Post-Login-Dashboard",
+    icon: <MdDashboard />,
   },
 ];
 

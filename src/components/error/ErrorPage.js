@@ -14,7 +14,7 @@ const ErrorPage = ({ title, message, showRetry }) => {
 
   return (
     <div
-      className="bg-[#0F2938] flex justify-center pb-20 md:pb-32 min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat relative p-8"
+      className="bg-[#0F2938] flex justify-center md:pb-32 h-full flex items-center justify-center bg-cover bg-center bg-no-repeat relative p-0 md:p-8"
       style={{
         backgroundImage:
           window.innerWidth <= 768
@@ -22,7 +22,7 @@ const ErrorPage = ({ title, message, showRetry }) => {
             : "url('/fallback.svg')",
       }}
     >
-      <div className="text-[#A1F6FF] self-end flex items-center flex-col justify-center gap-4 max-w-[280px] md:max-w-[350px]">
+      <div className="text-[#A1F6FF] self-end flex items-center flex-col justify-center gap-4 max-w-[280px] md:max-w-[350px] mb-8 md:mb-0">
         <h1 className="text-left text-3xl md:text-4xl lg:text-6xl font-bold text-[#A1F6FF]">
           {title}
         </h1>

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FaMedium, FaGithub } from "react-icons/fa";
 import { sidebarProjectItems } from "../../constants/main";
 import { ROUTES } from "../../constants/routes";
 
@@ -35,10 +36,30 @@ const Landing = () => {
             composed dynamically at runtime.
             <br />
           </p>
-          <p className="text-[#A1F6FF] text-base md:text-base lg:text-xl">
+          <p className="text-[#A1F6FF] text-base md:text-base lg:text-xl flex items-center">
             <span className="pb-0.5 border-b border-b-[#A1F6FF]">
               The architecture is the art.
             </span>
+            <a
+              href="https://medium.com/@devi-r"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-3 inline-block text-white hover:text-[#00f2ea] transition-colors duration-200"
+              aria-label="Read Medium Article"
+              title="Read Medium Article"
+            >
+              <FaMedium className="text-2xl lg:text-3xl" />
+            </a>
+            <a
+              href="https://github.com/devi-r/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-3 inline-block text-white hover:text-[#00f2ea] transition-colors duration-200"
+              aria-label="View Github Repository"
+              title="View Github Repository"
+            >
+              <FaGithub className="text-2xl lg:text-3xl" />
+            </a>
           </p>
 
           {/* Explore Button */}

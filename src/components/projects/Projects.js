@@ -9,7 +9,7 @@ const Projects = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-3xl md:text-3xl lg:text-4xl font-bold text-[#A1F6FF] mb-4">
-            My Projects
+            Projects
           </h1>
           <div className="flex justify-center px-4">
             <p className="max-w-3xl text-left text-sm md:text-sm lg:text-base leading-relaxed">
