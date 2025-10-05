@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# My Microfrontend Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains the source code for the **Shell** of my personal portfolio, which is built using a microfrontend architecture.
 
-## Available Scripts
+**Live Preview:** []()
 
-In the project directory, you can run:
+## Architectural Overview
 
-### `npm start`
+As the central **React Shell**, this application is responsible for the main layout, navigation, and orchestration. It loads individual portfolio projects as independent **Remotes**, each of which is maintained in its own separate repository.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Main Technology Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Core Architecture**: Webpack 5 & Module Federation
+- **Shell & Remotes**: React, Next.js
+- **Build Tooling**: Craco (for Create React App configuration override)
 
-### `npm test`
+## Live Remotes & Preview URLs
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Each remote application is developed and deployed independently.
 
-### `npm run build`
+| Remote Project Name   | Repo                                                                             | Preview                                                 |
+| --------------------- | -------------------------------------------------------------------------------- | ------------------------------------------------------- |
+| Post Login Dashboard  | https://github.com/devi-r/React-Post-Login-Dashboard                             | https://react-post-login-dashboard.onrender.com/        |
+| Ecommerce Catalogue   | https://github.com/devi-r/React-Ecommerce-Catalogue-Page                         | https://react-ecommerce-catalogue-page.onrender.com     |
+| Syntax Highlighter    | https://github.com/devi-r/React-Syntax-Highlighter                               | https://react-syntax-highlighter.onrender.com/          |
+| AI FE System Designer | https://github.com/devi-r/Nextjs-Fullstack-AI-FE-System-Design-Article-Generator | https://nextjs-fullstack-ai-fe-system-desig.vercel.app/ |
+| WebGl Paint Splatter  | https://github.com/devi-r/React-WebGL-Paint-Splatter                             | https://react-webgl-paint-splatter.onrender.com/        |
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Mock Backend Server
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Several remotes rely on dynamic data to function. To simulate a real-world environment without the overhead of a full backend, this project includes an `express-mock-server`[https://express-mock-server-rose.vercel.app]. This server provides a simple, hardcoded API that the remotes can fetch data from, allowing them to be developed and demonstrated as if they were connected to live services.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Getting Started: Local Development
 
-### `npm run eject`
+To run the entire ecosystem on your local machine, follow these steps.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Prerequisites
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Node.js (v18 or higher)
+- `npm` or `yarn`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Installation & Running
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1.  **Clone all the repositories:**
 
-## Learn More
+    ```bash
+    git clone <repo-url>
+    cd project-name
+    ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2.  **Install dependencies for all apps:**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    ```bash
+    npm install
+    ```
 
-### Code Splitting
+3.  **Run the applications:**
+    It's important to start the remote applications **first**, as the shell will fetch their `remoteEntry.js` files on startup. Open a new terminal for each application.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    ```
 
-### Analyzing the Bundle Size
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+4.  **Open the application:**
+    Navigate to `http://localhost:3000` in your browser to see the shell application with the remotes integrated.
 
-### Making a Progressive Web App
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **[Devi R](https://www.linkedin.com/in/devi-r-06bb94a7)**
