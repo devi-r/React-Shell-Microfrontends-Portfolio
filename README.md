@@ -2,7 +2,7 @@
 
 This repository contains the source code for the **Shell** of my personal portfolio, which is built using a microfrontend architecture.
 
-**Live Preview:** [todo]()
+**Live Preview:** [https://devi-r.com](https://devi-r.com)
 
 ## Architectural Overview
 
