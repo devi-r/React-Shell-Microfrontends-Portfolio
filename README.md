@@ -28,7 +28,7 @@ Each remote application is developed and deployed independently.
 
 ## Mock Backend Server
 
-Several remotes rely on dynamic data to function. To simulate a real-world environment without the overhead of a full backend, this project includes an (express-mock-server)[https://express-mock-server-rose.vercel.app] (Repo)[https://github.com/devi-r/Express-Mock-Server]. This server provides a simple, hardcoded API that the remotes can fetch data from, allowing them to be developed and demonstrated as if they were connected to live services.
+Several remotes rely on dynamic data to function. To simulate a real-world environment without the overhead of a full backend, this project includes an [express-mock-server](https://express-mock-server-rose.vercel.app) [Repo](https://github.com/devi-r/Express-Mock-Server). This server provides a simple, hardcoded API that the remotes can fetch data from, allowing them to be developed and demonstrated as if they were connected to live services.
 
 ## Getting Started: Local Development
 
