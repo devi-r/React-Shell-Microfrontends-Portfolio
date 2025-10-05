@@ -51,16 +51,6 @@ export const sidebarProjectItems = [
 
 export const playgroundItems = [
   {
-    path: ROUTES.NOT_FOUND_DEMO,
-    label: "Lost in Space",
-    icon: <BiSolidError />,
-  },
-  {
-    path: ROUTES.ERROR_DEMO,
-    label: "Glitch in the Matrix",
-    icon: <MdError />,
-  },
-  {
     path: ROUTES.ABOUT_ME,
     label: "Surprise Me",
     icon: <MdHelp />,
