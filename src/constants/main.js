@@ -34,7 +34,7 @@ export const projectItems = [
     title: "AI FE System Designer",
     viewUrl: ROUTES.AI_FE_SYSTEM_DESIGNER,
     githubUrl:
-      "https://github.com/devi-r/NextJS-Fullstack-AI-FE-System-Designer",
+      "https://github.com/devi-r/Nextjs-Fullstack-AI-FE-System-Design-Article-Generator",
     icon: <AiFillCode />,
   },
 ];
