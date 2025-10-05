@@ -57,10 +57,6 @@ To run the entire ecosystem on your local machine, follow these steps.
 3.  **Run the applications:**
     It's important to start the remote applications **first**, as the shell will fetch their `remoteEntry.js` files on startup. Open a new terminal for each application.
 
-    ```
-
-    ```
-
 4.  **Open the application:**
     Navigate to `http://localhost:3000` in your browser to see the shell application with the remotes integrated.
 
