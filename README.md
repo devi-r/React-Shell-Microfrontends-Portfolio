@@ -2,7 +2,7 @@
 
 This repository contains the source code for the **Shell** of my personal portfolio, which is built using a microfrontend architecture.
 
-**Live Preview:** []()
+**Live Preview:** [todo]()
 
 ## Architectural Overview
 
