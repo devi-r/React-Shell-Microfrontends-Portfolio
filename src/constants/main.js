@@ -1,8 +1,7 @@
 import React from "react";
 import { MdDashboard, MdFolder } from "react-icons/md";
 import { RiFolderOpenFill } from "react-icons/ri";
-import { MdError, MdHelp, MdCode } from "react-icons/md";
-import { BiSolidError } from "react-icons/bi";
+import { MdHelp, MdCode } from "react-icons/md";
 import { ROUTES } from "./routes.js";
 import { AiFillCode } from "react-icons/ai";
 
