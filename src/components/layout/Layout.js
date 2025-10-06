@@ -1,17 +1,24 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
 import Sidebar from "./sidebar/Sidebar";
 import Header from "./Header";
-import useRouteChangeTracker from "../../hooks/useRouteChangeTracker";
 
 const Layout = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { isRouteChanged } = useRouteChangeTracker();
+  const { pathname } = useLocation();
+  const mainContentRef = useRef(null);
 
   useEffect(() => {
-    if (isRouteChanged && isMenuOpen) {
+    if (isMenuOpen) {
       setIsMenuOpen(false);
     }
-  }, [isRouteChanged, isMenuOpen]);
+  }, [pathname, isMenuOpen]);
+
+  useEffect(() => {
+    if (mainContentRef.current) {
+      mainContentRef.current.scrollTop = 0;
+    }
+  }, [pathname]);
 
   const handleCloseSidebar = () => {
     setIsMenuOpen(false);
@@ -33,7 +40,10 @@ const Layout = ({ children }) => {
 
       {/* Main Content Area: Takes up remaining space */}
       <div className="flex-1 flex flex-col overflow-hidden transition-all duration-200 ease-in-out">
-        <main className="layout-root flex-1 overflow-auto bg-[#0B1C24]">
+        <main
+          ref={mainContentRef}
+          className="layout-root flex-1 overflow-auto bg-[#0B1C24]"
+        >
           {children}
         </main>
       </div>

@@ -22,8 +22,9 @@ const Projects = () => {
                 my&nbsp;
                 <a
                   href="/Devi_R_Senior_Frontend_Engineer_Resume.pdf"
-                  download
-                  aria-label="Download Resume"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View Resume"
                   className="text-blue-600 hover:text-blue-800 underline"
                 >
                   resume
