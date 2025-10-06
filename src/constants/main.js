@@ -1,7 +1,7 @@
 import React from "react";
 import { MdDashboard, MdFolder } from "react-icons/md";
 import { RiFolderOpenFill } from "react-icons/ri";
-import { MdHelp, MdCode } from "react-icons/md";
+import { MdCode, MdPerson } from "react-icons/md";
 import { ROUTES } from "./routes.js";
 import { AiFillCode } from "react-icons/ai";
 
@@ -51,7 +51,7 @@ export const sidebarProjectItems = [
 export const playgroundItems = [
   {
     path: ROUTES.ABOUT_ME,
-    label: "Surprise Me",
-    icon: <MdHelp />,
+    label: "About Me",
+    icon: <MdPerson />,
   },
 ];

@@ -1,6 +1,6 @@
 import React from "react";
-import { HiMail, HiDownload } from "react-icons/hi";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { HiMail } from "react-icons/hi";
+import { FaGithub, FaLinkedin, FaFilePdf } from "react-icons/fa";
 
 const SocialLinks = ({ isCollapsed }) => {
   return (
@@ -12,9 +12,10 @@ const SocialLinks = ({ isCollapsed }) => {
       >
         {/* Email */}
         <a
-          href="mailto:devi2357@gmail.com"
+          href="mailto:devi.frontend@gmail.com"
           className="text-slate-400 hover:text-white transition-all duration-300 p-2 rounded-lg hover:bg-slate-800/50 group"
           aria-label="Email"
+          title="Email"
         >
           <HiMail className="w-5 h-5 group-hover:scale-110 transition-transform" />
         </a>
@@ -26,6 +27,7 @@ const SocialLinks = ({ isCollapsed }) => {
           rel="noopener noreferrer"
           className="text-slate-400 hover:text-white transition-all duration-300 p-2 rounded-lg hover:bg-slate-800/50 group"
           aria-label="GitHub"
+          title="GitHub"
         >
           <FaGithub className="w-5 h-5 group-hover:scale-110 transition-transform" />
         </a>
@@ -37,18 +39,21 @@ const SocialLinks = ({ isCollapsed }) => {
           rel="noopener noreferrer"
           className="text-slate-400 hover:text-white transition-all duration-300 p-2 rounded-lg hover:bg-slate-800/50 group"
           aria-label="LinkedIn"
+          title="LinkedIn"
         >
           <FaLinkedin className="w-5 h-5 group-hover:scale-110 transition-transform" />
         </a>
 
-        {/* Download Resume */}
+        {/* View Resume */}
         <a
           href="/Devi_R_Senior_Frontend_Engineer_Resume.pdf"
-          download
           className="text-slate-400 hover:text-white transition-all duration-300 p-2 rounded-lg hover:bg-slate-800/50 group"
-          aria-label="Download Resume"
+          aria-label="View Resume"
+          title="View Resume"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <HiDownload className="w-5 h-5 group-hover:scale-110 transition-transform" />
+          <FaFilePdf className="w-5 h-5 group-hover:scale-110 transition-transform" />
         </a>
       </div>
     </div>
