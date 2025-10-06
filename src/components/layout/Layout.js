@@ -12,7 +12,8 @@ const Layout = ({ children }) => {
     if (isMenuOpen) {
       setIsMenuOpen(false);
     }
-  }, [pathname, isMenuOpen]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pathname]);
 
   useEffect(() => {
     if (mainContentRef.current) {
