@@ -1,12 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaMedium, FaGithub } from "react-icons/fa";
-import { sidebarProjectItems } from "../../constants/main";
 import { ROUTES } from "../../constants/routes";
 
 const Landing = () => {
-  const firstProject = sidebarProjectItems[0];
-
   return (
     <div
       className="w-full h-full bg-[#0F2430] bg-cover bg-center bg-no-repeat m-0 p-0"
@@ -64,7 +61,7 @@ const Landing = () => {
 
           {/* Explore Button */}
           <Link
-            to={firstProject.viewUrl}
+            to={ROUTES.PORTFOLIO_ARCHITECTURE_BLOG}
             className="mt-10 md:mt-16 inline-block bg-[#193C50] text-[#0F2430] border border-[#193C50] px-8 py-3 rounded-[1000px] font-semibold text-[#CDEBEE] max-xs:text-sm text-base md:text-base lg:text-lg hover:bg-[#0D212E] hover:border-[#153243] transition-colors duration-200"
           >
             Explore the architecture

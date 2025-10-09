@@ -3,14 +3,26 @@ import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Project = ({ project }) => {
-  const { title, description, viewUrl, githubUrl, externalLink } = project;
+  const { title, description, viewUrl, githubUrl, externalLink, tags } =
+    project;
 
   return (
     <div className="min-w-0 bg-[#0F2430] p-5 rounded-[6px] shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
       {/* Project Content */}
       <div className="p-6 fancy-border-box">
         <h3 className="text-[#A1F6FF] text-sm md:text-base mb-3">{title}</h3>
-        <p className="text-[#A7D1D7] text-sm md:text-sm mb-10">{description}</p>
+        <p className="text-[#A7D1D7] text-sm md:text-sm mb-3">{description}</p>
+
+        <div className="flex gap-4 mb-3">
+          {tags.map((tag) => (
+            <span
+              key={tag}
+              className="text-[#A7D1D7] text-sm md:text-sm mb-10 bg-[#0D212E] rounded-[6px] p-2"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
 
         {/* Action Buttons */}
         <div className="flex gap-4">

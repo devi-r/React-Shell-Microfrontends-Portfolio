@@ -3,7 +3,7 @@ import SidebarHeader from "./SidebarHeader";
 import SidebarSection from "./SidebarSection";
 import SocialLinks from "./SocialLinks";
 import SidebarTooltip from "./SidebarTooltip";
-import { sidebarProjectItems, playgroundItems } from "../../../constants/main";
+import { sidebarItems } from "../../../constants/main";
 
 const Sidebar = ({ isMenuOpen }) => {
   const [isHovering, setIsHovering] = useState(false);
@@ -79,17 +79,16 @@ const Sidebar = ({ isMenuOpen }) => {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <SidebarSection
-          isCollapsed={isCollapsed}
-          sectionTitle="Projects"
-          items={sidebarProjectItems}
-        />
-
-        <SidebarSection
-          isCollapsed={isCollapsed}
-          sectionTitle="Playground"
-          items={playgroundItems}
-        />
+        {sidebarItems.map((section) => (
+          <SidebarSection
+            isCollapsed={isCollapsed}
+            sectionTitle={section.sectionTitle}
+            showAction={section.showAction}
+            actionPath={section.actionPath}
+            actionLabel={section.actionLabel}
+            items={section.items}
+          />
+        ))}
 
         <SocialLinks isCollapsed={isCollapsed} />
       </div>

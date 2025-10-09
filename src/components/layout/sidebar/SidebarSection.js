@@ -5,9 +5,9 @@ const SidebarSection = ({
   isCollapsed,
   sectionTitle,
   items,
-  showViewAll = false,
-  viewAllPath = "",
-  viewAllLabel = "View All",
+  showAction = false,
+  actionPath = "",
+  actionLabel = "View All",
 }) => {
   const location = useLocation();
 
@@ -19,12 +19,12 @@ const SidebarSection = ({
             <h3 className="text-slate-400 text-sm md:text-sm font-semibold uppercase tracking-wider truncate">
               {sectionTitle}
             </h3>
-            {showViewAll && (
+            {showAction && (
               <Link
-                to={viewAllPath}
+                to={actionPath}
                 className="text-[#A1F6FF] hover:opacity-80 text-sm md:text-sm font-medium transition-colors hover:underline truncate"
               >
-                {viewAllLabel}
+                {actionLabel}
               </Link>
             )}
           </>
@@ -34,10 +34,10 @@ const SidebarSection = ({
       <ul className="space-y-1 max-h-80 overflow-y-auto hide-scrollbar">
         {items.map((item) => (
           <li key={item.path} className="w-full">
-            {item.target ? (
+            {item.external ? (
               <a
-                href={item.path}
-                target={item.target}
+                href={item.externalUrl}
+                target={item.externalTarget}
                 rel="noopener noreferrer"
                 className="w-full flex items-center gap-3 py-2 rounded-lg transition-all duration-300 group relative text-slate-300 hover:text-white"
               >

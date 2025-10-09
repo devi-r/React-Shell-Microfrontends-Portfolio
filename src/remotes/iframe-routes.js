@@ -5,6 +5,10 @@ export const iframesUrlsMap = {
     devUrl: `http://localhost:3004${ROUTES.AI_FE_SYSTEM_DESIGNER}`,
     prodUrl: `https://nextjs-fullstack-ai-fe-system-desig.vercel.app${ROUTES.AI_FE_SYSTEM_DESIGNER}`,
   },
+  portfolioArchitectureBlog: {
+    devUrl: `http://localhost:3006${ROUTES.PORTFOLIO_ARCHITECTURE_BLOG}`,
+    prodUrl: `https://nextjs-portfolio-blogs.vercel.app/blogs/portfolio-architecture${ROUTES.PORTFOLIO_ARCHITECTURE_BLOG}`,
+  },
 };
 
 export const iframeRoutesMetadata = [
@@ -17,5 +21,13 @@ export const iframeRoutesMetadata = [
       process.env.NODE_ENV === "development"
         ? iframesUrlsMap.aiFeSystemDesigner.devUrl
         : iframesUrlsMap.aiFeSystemDesigner.prodUrl,
+  },
+  {
+    name: "portfolioArchitectureBlog",
+    path: ROUTES.PORTFOLIO_ARCHITECTURE_BLOG,
+    remoteUrl:
+      process.env.NODE_ENV === "development"
+        ? iframesUrlsMap.portfolioArchitectureBlog.devUrl
+        : iframesUrlsMap.portfolioArchitectureBlog.prodUrl,
   },
 ];

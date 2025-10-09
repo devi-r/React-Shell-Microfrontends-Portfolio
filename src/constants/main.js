@@ -1,9 +1,9 @@
 import React from "react";
-import { MdDashboard, MdFolder } from "react-icons/md";
-import { RiFolderOpenFill } from "react-icons/ri";
+import { MdFolder, MdArticle } from "react-icons/md";
 import { MdCode, MdPerson } from "react-icons/md";
 import { ROUTES } from "./routes.js";
 import { AiFillCode } from "react-icons/ai";
+import { FaCodeBranch } from "react-icons/fa";
 
 // Detailed project data for Projects page
 export const projectItems = [
@@ -13,6 +13,7 @@ export const projectItems = [
     viewUrl: ROUTES.SYNTAX_HIGHLIGHTER,
     githubUrl: "https://github.com/devi-r/React-Syntax-Highlighter",
     icon: <MdCode />,
+    tags: ["React", "Module Federation"],
   },
   {
     id: 2,
@@ -21,6 +22,7 @@ export const projectItems = [
     githubUrl:
       "https://github.com/devi-r/Nextjs-Fullstack-AI-FE-System-Design-Article-Generator",
     icon: <AiFillCode />,
+    tags: ["Next.js", "Iframe"],
   },
   {
     id: 3,
@@ -28,30 +30,51 @@ export const projectItems = [
     viewUrl: ROUTES.ECOMMERCE_CATALOGUE,
     githubUrl: "https://github.com/devi-r/React-Ecommerce-Catalogue-Page",
     icon: <MdFolder />,
+    tags: ["React", "Module Federation"],
   },
-  {
-    id: 4,
-    title: "Post Login Dashboard",
-    viewUrl: ROUTES.POST_LOGIN_DASHBOARD,
-    githubUrl: "https://github.com/devi-r/React-Post-Login-Dashboard",
-    icon: <MdDashboard />,
-  },
+  // {
+  //   id: 4,
+  //   title: "Post Login Dashboard",
+  //   viewUrl: ROUTES.POST_LOGIN_DASHBOARD,
+  //   githubUrl: "https://github.com/devi-r/React-Post-Login-Dashboard",
+  //   icon: <MdDashboard />,
+  // },
 ];
 
-// Sidebar navigation items
-export const sidebarProjectItems = [
+export const sidebarItems = [
   {
-    viewUrl: ROUTES.PROJECTS,
-    title: "All Projects",
-    icon: <RiFolderOpenFill />,
+    sectionTitle: "MFE Architecture",
+    items: [
+      {
+        path: ROUTES.PORTFOLIO_ARCHITECTURE_BLOG,
+        label: "How It's Built",
+        icon: <MdArticle />,
+      },
+      {
+        label: "View Source Code",
+        icon: <FaCodeBranch />,
+        external: true,
+        externalTarget: "_blank",
+        externalUrl:
+          "https://github.com/devi-r/React-Shell-Microfrontends-Portfolio",
+      },
+    ],
   },
-  ...projectItems,
-];
-
-export const playgroundItems = [
   {
-    path: ROUTES.ABOUT_ME,
-    label: "About Me",
-    icon: <MdPerson />,
+    sectionTitle: "LIVE REMOTES",
+    showAction: true,
+    actionPath: ROUTES.PROJECTS,
+    actionLabel: "View All",
+    items: [...projectItems],
+  },
+  {
+    sectionTitle: "RESOURCES",
+    items: [
+      {
+        path: ROUTES.ABOUT_ME,
+        label: "Contact Me",
+        icon: <MdPerson />,
+      },
+    ],
   },
 ];
