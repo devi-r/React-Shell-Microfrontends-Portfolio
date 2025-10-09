@@ -7,7 +7,7 @@ export const iframesUrlsMap = {
   },
   portfolioArchitectureBlog: {
     devUrl: `http://localhost:3006${ROUTES.PORTFOLIO_ARCHITECTURE_BLOG}`,
-    prodUrl: `https://nextjs-portfolio-blogs.vercel.app/blogs/portfolio-architecture${ROUTES.PORTFOLIO_ARCHITECTURE_BLOG}`,
+    prodUrl: `https://nextjs-portfolio-blogs.vercel.app${ROUTES.PORTFOLIO_ARCHITECTURE_BLOG}`,
   },
 };
 
