@@ -6,8 +6,8 @@ export const iframesUrlsMap = {
     prodUrl: `https://nextjs-fullstack-ai-fe-system-desig.vercel.app${ROUTES.AI_FE_SYSTEM_DESIGNER}`,
   },
   portfolioArchitectureBlog: {
-    devUrl: `http://localhost:3006${ROUTES.PORTFOLIO_ARCHITECTURE_BLOG}`,
-    prodUrl: `https://nextjs-portfolio-blogs.vercel.app${ROUTES.PORTFOLIO_ARCHITECTURE_BLOG}`,
+    devUrl: `http://localhost:3006/blogs${ROUTES.PORTFOLIO_ARCHITECTURE_BLOG}`,
+    prodUrl: `https://nextjs-portfolio-blogs.vercel.app/blogs${ROUTES.PORTFOLIO_ARCHITECTURE_BLOG}`,
   },
 };
 

@@ -14,7 +14,7 @@ export const REMOTE_ROUTES = {
 
 export const IFRAME_ROUTES = {
   AI_FE_SYSTEM_DESIGNER: "/ai-fe-system-designer",
-  PORTFOLIO_ARCHITECTURE_BLOG: "/blogs/portfolio-architecture",
+  PORTFOLIO_ARCHITECTURE_BLOG: "/portfolio-architecture",
 };
 
 // Centralized route configuration
