@@ -11,7 +11,6 @@ class RemoteErrorBoundary extends React.Component {
       errorInfo: null,
       retryCount: 0,
     };
-    console.log({ props });
   }
 
   static getDerivedStateFromError(error) {
