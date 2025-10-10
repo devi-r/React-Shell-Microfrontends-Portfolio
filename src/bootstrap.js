@@ -5,7 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import ReactGA from "react-ga4";
 
-const GA_MEASUREMENT_ID = process.env.PORTFOLIO_APP_GA_MEASUREMENT_ID;
+const GA_MEASUREMENT_ID = process.env.REACT_APP_PORTFOLIO_GA_MEASUREMENT_ID;
 
 console.log("GA_MEASUREMENT_ID", GA_MEASUREMENT_ID);
 
