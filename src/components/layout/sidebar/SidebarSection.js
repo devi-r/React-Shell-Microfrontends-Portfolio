@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
+import ReactGA from "react-ga4";
 
 const SidebarSection = ({
   isCollapsed,
@@ -10,6 +11,14 @@ const SidebarSection = ({
   actionLabel = "View All",
 }) => {
   const location = useLocation();
+
+  const handleActionClick = () => {
+    ReactGA.event({
+      category: "User Interaction",
+      action: `Clicked ${actionLabel}`,
+      label: actionLabel,
+    });
+  };
 
   return (
     <div className="flex flex-col min-h-0 py-4 px-6 align-start">
@@ -23,6 +32,7 @@ const SidebarSection = ({
               <Link
                 to={actionPath}
                 className="text-[#A1F6FF] hover:opacity-80 text-sm md:text-sm font-medium transition-colors hover:underline truncate"
+                onClick={handleActionClick}
               >
                 {actionLabel}
               </Link>
