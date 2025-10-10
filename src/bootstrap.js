@@ -7,8 +7,6 @@ import ReactGA from "react-ga4";
 
 const GA_MEASUREMENT_ID = process.env.REACT_APP_PORTFOLIO_GA_MEASUREMENT_ID;
 
-console.log("GA_MEASUREMENT_ID", GA_MEASUREMENT_ID);
-
 // Initialize GA4
 if (GA_MEASUREMENT_ID) {
   ReactGA.initialize(GA_MEASUREMENT_ID);
