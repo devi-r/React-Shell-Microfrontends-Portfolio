@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import ReactGA from "react-ga4";
+import { useAnalytics } from "../../../hooks/useAnalytics";
 
 const SidebarSection = ({
   isCollapsed,
@@ -11,15 +11,18 @@ const SidebarSection = ({
   actionLabel = "View All",
 }) => {
   const location = useLocation();
+  const { trackInteraction } = useAnalytics();
 
   const handleActionClick = () => {
-    ReactGA.event({
-      category: "User Interaction",
-      action: `Clicked ${actionLabel}`,
-      label: actionLabel,
-    });
+    trackInteraction(`Clicked ${actionLabel}`, actionLabel);
   };
 
+  const handleItemClick = (item) => {
+    trackInteraction(
+      `Clicked ${item.label || item.title}`,
+      item.label || item.title
+    );
+  };
   return (
     <div className="flex flex-col min-h-0 py-4 px-6 align-start">
       <div className="flex items-center justify-between mb-4 h-6">
@@ -50,6 +53,7 @@ const SidebarSection = ({
                 target={item.externalTarget}
                 rel="noopener noreferrer"
                 className="w-full flex items-center gap-3 py-2 rounded-lg transition-all duration-300 group relative text-slate-300 hover:text-white"
+                onClick={() => handleItemClick(item)}
               >
                 <span className="text-base md:text-base lg:text-xl flex-shrink-0">
                   {item.icon}
@@ -68,6 +72,7 @@ const SidebarSection = ({
                     ? "text-[#A1F6FF]"
                     : "text-slate-300 hover:text-white"
                 }`}
+                onClick={() => handleItemClick(item)}
               >
                 <span className="text-base md:text-base lg:text-xl flex-shrink-0">
                   {item.icon}

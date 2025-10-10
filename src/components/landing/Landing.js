@@ -1,16 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaMedium, FaGithub } from "react-icons/fa";
 import { ROUTES } from "../../constants/routes";
-import ReactGA from "react-ga4";
+import { useAnalytics } from "../../hooks/useAnalytics";
 
 const Landing = () => {
+  const { trackInteraction, trackPage } = useAnalytics();
+
+  // Track page view on mount
+  useEffect(() => {
+    trackPage(ROUTES.LANDING, "Landing Page");
+  }, [trackPage]);
+
   const handleExploreClick = () => {
-    ReactGA.event({
-      category: "User Interaction",
-      action: "Clicked Explore the architecture",
-      label: "Explore architecture",
-    });
+    trackInteraction(
+      "Clicked Explore the architecture",
+      "Explore architecture"
+    );
   };
 
   return (

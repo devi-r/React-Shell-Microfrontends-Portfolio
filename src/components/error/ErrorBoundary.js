@@ -1,5 +1,6 @@
 import React from "react";
 import ErrorPage from "./ErrorPage";
+import { trackCustomEvent } from "../../utils/analytics";
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -15,6 +16,16 @@ class ErrorBoundary extends React.Component {
   componentDidCatch(error, errorInfo) {
     // Log error details
     console.error("ErrorBoundary caught an error:", error, errorInfo);
+
+    // Track error in analytics
+    trackCustomEvent(
+      "Error",
+      "React Error Boundary",
+      `${error.toString()} - ${
+        errorInfo.componentStack?.split("\n")[0] || "Unknown component"
+      }`
+    );
+
     this.setState({
       error: error,
       errorInfo: errorInfo,
@@ -28,6 +39,7 @@ class ErrorBoundary extends React.Component {
           title="Oops!"
           message="Something went off-script while rendering this view. Please retry."
           showRetry={true}
+          errorType="React Error"
         />
       );
     }

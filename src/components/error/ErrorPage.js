@@ -1,14 +1,35 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+import { useAnalytics } from "../../hooks/useAnalytics";
+import { ROUTES } from "../../constants/routes";
 
-const ErrorPage = ({ title, message, showRetry }) => {
+const ErrorPage = ({ title, message, showRetry, errorType = "Error" }) => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const { trackInteraction, trackCustom } = useAnalytics();
+
+  // Track error page view if not tracked by parent
+  useEffect(() => {
+    if (errorType !== "404") {
+      // 404 is tracked in NotFoundPage.js
+      trackCustom(
+        "Error",
+        `${errorType} Page View`,
+        `Error at: ${location.pathname}`
+      );
+    }
+  }, [errorType, location.pathname, trackCustom]);
 
   const handleGoHome = () => {
-    navigate("/");
+    trackInteraction(
+      `Clicked Back to Shell from ${errorType}`,
+      `${errorType} - Back to Shell`
+    );
+    navigate(ROUTES.LANDING);
   };
 
   const handleReload = () => {
+    trackInteraction(`Clicked Retry from ${errorType}`, `${errorType} - Retry`);
     window.location.reload();
   };
 

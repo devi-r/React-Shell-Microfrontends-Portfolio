@@ -1,8 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Project from "./Project";
 import { projectItems } from "../../constants/main";
+import { useAnalytics } from "../../hooks/useAnalytics";
+import { ROUTES } from "../../constants/routes";
 
 const Projects = () => {
+  const { trackPage, trackInteraction } = useAnalytics();
+
+  // Track page view on mount
+  useEffect(() => {
+    trackPage(ROUTES.PROJECTS, "Projects Page");
+  }, [trackPage]);
+
+  const handleResumeClick = () => {
+    trackInteraction("Clicked Resume Link", "Resume - Projects Page");
+  };
+
+  const handleGitHubClick = () => {
+    trackInteraction("Clicked GitHub Link", "GitHub - Projects Footer");
+  };
+
   return (
     <div className="min-h-screen py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -26,6 +43,7 @@ const Projects = () => {
                   rel="noopener noreferrer"
                   aria-label="View Resume"
                   className="text-blue-600 hover:text-blue-800 underline"
+                  onClick={handleResumeClick}
                 >
                   resume
                 </a>
@@ -51,6 +69,7 @@ const Projects = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600 hover:text-blue-800 underline"
+              onClick={handleGitHubClick}
             >
               GitHub
             </a>

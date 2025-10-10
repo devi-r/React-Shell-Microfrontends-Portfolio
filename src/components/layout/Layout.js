@@ -2,11 +2,25 @@ import React, { useState, useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import Sidebar from "./sidebar/Sidebar";
 import Header from "./Header";
+import { useAnalytics } from "../../hooks/useAnalytics";
+import { ROUTES } from "../../constants/routes";
 
 const Layout = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { pathname } = useLocation();
   const mainContentRef = useRef(null);
+  const { trackPage } = useAnalytics();
+
+  // Track page view when path changes
+  useEffect(() => {
+    // Get page title from pathname
+    const pageTitle =
+      pathname === ROUTES.LANDING
+        ? "Landing Page"
+        : pathname.split("/").filter(Boolean).join(" - ").replace(/-/g, " ");
+
+    trackPage(pathname, pageTitle);
+  }, [pathname, trackPage]);
 
   useEffect(() => {
     if (isMenuOpen) {

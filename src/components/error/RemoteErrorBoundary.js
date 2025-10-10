@@ -1,5 +1,6 @@
 import React from "react";
 import ErrorPage from "./ErrorPage";
+import { trackCustomEvent } from "../../utils/analytics";
 
 class RemoteErrorBoundary extends React.Component {
   constructor(props) {
@@ -19,6 +20,14 @@ class RemoteErrorBoundary extends React.Component {
 
   componentDidCatch(error, errorInfo) {
     console.error("RemoteErrorBoundary caught an error:", error, errorInfo);
+
+    // Track microfrontend error in analytics
+    trackCustomEvent(
+      "Error",
+      "Microfrontend Error Boundary",
+      `${error.toString()} - Microfrontend: ${this.props.name || "Unknown"}`
+    );
+
     this.setState({
       error: error,
       errorInfo: errorInfo,
@@ -39,8 +48,9 @@ class RemoteErrorBoundary extends React.Component {
       return (
         <ErrorPage
           title="Oops!"
-          message="Something broke while bootstrapping this microfrontend. Don’t worry, it’s not you, it’s the runtime."
+          message="Something broke while bootstrapping this microfrontend. Don't worry, it's not you, it's the runtime."
           showRetry={true}
+          errorType="Microfrontend Error"
         />
       );
     }
