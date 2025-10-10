@@ -2,8 +2,17 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FaMedium, FaGithub } from "react-icons/fa";
 import { ROUTES } from "../../constants/routes";
+import ReactGA from "react-ga4";
 
 const Landing = () => {
+  const handleExploreClick = () => {
+    ReactGA.event({
+      category: "User Interaction",
+      action: "Clicked Explore the architecture",
+      label: "Explore architecture",
+    });
+  };
+
   return (
     <div
       className="w-full h-full bg-[#0F2430] bg-cover bg-center bg-no-repeat m-0 p-0"
@@ -63,6 +72,7 @@ const Landing = () => {
           <Link
             to={ROUTES.PORTFOLIO_ARCHITECTURE_BLOG}
             className="mt-10 md:mt-16 inline-block bg-[#193C50] text-[#0F2430] border border-[#193C50] px-8 py-3 rounded-[1000px] font-semibold text-[#CDEBEE] max-xs:text-sm text-base md:text-base lg:text-lg hover:bg-[#0D212E] hover:border-[#153243] transition-colors duration-200"
+            onClick={handleExploreClick}
           >
             Explore the architecture
           </Link>
