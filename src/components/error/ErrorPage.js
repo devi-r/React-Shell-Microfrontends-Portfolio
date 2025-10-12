@@ -39,8 +39,8 @@ const ErrorPage = ({ title, message, showRetry, errorType = "Error" }) => {
       style={{
         backgroundImage:
           window.innerWidth <= 768
-            ? "url('/fallback-mob.svg')"
-            : "url('/fallback.svg')",
+            ? "url('/fallback-mob.webp')"
+            : "url('/fallback.webp')",
       }}
     >
       <div className="text-[#A1F6FF] self-end flex items-center flex-col justify-center gap-4 max-w-[280px] md:max-w-[350px] mb-8 md:mb-0">
