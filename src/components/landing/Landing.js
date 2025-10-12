@@ -22,7 +22,7 @@ const Landing = () => {
   return (
     <div
       className="w-full h-full bg-[#0F2430] bg-cover bg-center bg-no-repeat m-0 p-0"
-      style={{ backgroundImage: "url(/landing.svg)" }}
+      style={{ backgroundImage: "url(/landing.webp)" }}
     >
       <Link
         to={ROUTES.LANDING}
